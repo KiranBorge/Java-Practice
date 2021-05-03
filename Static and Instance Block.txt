@@ -1,0 +1,55 @@
+Static control flow: - 
+                      This flow runs at class loading time.
+
+Static Control Flow:
+
+1) Identification of static members from top to bottom
+2) Execution of static variable assignment and static block from top to bottom
+3) Execution of main method
+
+   eg.  class StaticControlFlow
+       {
+         static int i=10;
+          static
+          {
+            m1();
+            System.out.println("First Static Block");
+          }
+          public static void main(String[] args)
+          {
+            m1();
+            System.out.println("Main");
+          }
+          public static void m1()
+          {
+            System.out.println(j);
+          }
+          static
+          {
+            System.out.println("Second Static Block");
+          }
+          static int j=20;
+       }
+
+Static Control Flow from Parent to Child
+
+1) Identification of static members from parent to child
+2) Execution of static variable assignment and static block from parent to child
+3) Excution of main method from child class
+
+  eg.
+
+Instance Control flow:
+                      This control flow run when object will get created.
+                      
+ Instance control flow:-
+ 1) Identification of instance members from top to bottom
+ 2) Execution of instance variable assignment and instance block from top to bottom
+ 2) Execution of constructor
+ 
+ Instance control flow in Parent child relation:
+ 1) Identification of instance members from Parent to Child
+ 2) Excution of instance variable assignment and instance block only in parent class
+ 3) Execution of parent constructor
+ 4) Execution of instance variable assignment and instance block in child class
+ 5) Execution of child constructor
